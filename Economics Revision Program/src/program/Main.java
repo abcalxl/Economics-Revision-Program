@@ -6,9 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.GridLayout;
-import java.awt.BorderLayout;
-import javax.swing.JLabel;
 
 public class Main {
 
@@ -44,19 +41,14 @@ public class Main {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Add or Edit Questions");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		frame.getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
-		
-		JButton btnQuiz = new JButton("Quiz");
-		frame.getContentPane().add(btnQuiz);
-		
-		JLabel label = new JLabel("");
-		frame.getContentPane().add(label);
+		btnNewButton.setBounds(233, 42, 185, 27);
 		frame.getContentPane().add(btnNewButton);
 	}
 }
