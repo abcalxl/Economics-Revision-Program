@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class QuestionHandler {
 	public ArrayList<String> lines = new ArrayList<String>();
 	public QuestionHandler() {
-		File testfile = new File("src/resources/testingfile.txt");
+		File testfile = new File("src/resources/Questions_Database.txt");
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(testfile.getPath()));
 			String nextLine;

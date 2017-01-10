@@ -18,7 +18,7 @@ public class ShowOption extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public ShowOption(Main_ mainframe, int selectedTopic, int questionquantity) {
+	public ShowOption(Main_ mainframe, int selectedTopic, int questionQuantity) {
 		setLayout(null);
 		
 		JLabel lblYouHaveChosen = new JLabel("You have chosen:");
@@ -37,7 +37,7 @@ public class ShowOption extends JPanel {
 		
 		JTextArea txtrChosenquantity = new JTextArea();
 		txtrChosenquantity.setBackground(null);
-		txtrChosenquantity.setText(Integer.toString(questionquantity));
+		txtrChosenquantity.setText(Integer.toString(questionQuantity));
 		txtrChosenquantity.setBounds(320, 160, 67, 25);
 		add(txtrChosenquantity);
 		
