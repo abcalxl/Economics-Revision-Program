@@ -4,7 +4,8 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
-import questions.QuestionHandler;
+import questions.QuestionLoader;
+import questions.QuestionLoader;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -18,7 +19,7 @@ public class ShowOption extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public ShowOption(Main_ mainframe, int selectedTopic, int questionquantity) {
+	public ShowOption(Main_ mainframe, int selectedTopic, int questionQuantity) {
 		setLayout(null);
 		
 		JLabel lblYouHaveChosen = new JLabel("You have chosen:");
@@ -37,7 +38,7 @@ public class ShowOption extends JPanel {
 		
 		JTextArea txtrChosenquantity = new JTextArea();
 		txtrChosenquantity.setBackground(null);
-		txtrChosenquantity.setText(Integer.toString(questionquantity));
+		txtrChosenquantity.setText(Integer.toString(questionQuantity));
 		txtrChosenquantity.setBounds(320, 160, 67, 25);
 		add(txtrChosenquantity);
 		
@@ -56,6 +57,11 @@ public class ShowOption extends JPanel {
 		add(lblNumberOfQuestions);
 		
 		JButton btnConfirm = new JButton("CONFIRM");
+		btnConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mainframe.switchPanels("runquiz", selectedTopic, questionQuantity);
+			}
+		});
 		btnConfirm.setBounds(693, 9, 321, 93);
 		add(btnConfirm);
 		
@@ -64,7 +70,7 @@ public class ShowOption extends JPanel {
 		add(lblHi);
 		
 		
-		QuestionHandler q = new QuestionHandler();
+		QuestionLoader q = new QuestionLoader();
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setText(q.lines.get(0));
