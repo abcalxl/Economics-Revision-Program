@@ -3,29 +3,56 @@ package questions;
 import java.util.HashMap;
 
 public class Question {
-	public String Question;
-	public String questionTopic;
+	private String Question;
+	private String questionTopic;
 	private HashMap<Integer, String> options = new HashMap<Integer, String>();
-	public Integer correctOption;
+	private Integer correctOption;
 	
 	public Question(String question, String questiontopic, Integer correctoption) {
-		this.Question = question;
-		this.questionTopic = questiontopic;
-		this.correctOption = correctoption;
+		this.setQuestion(question);
+		this.setQuestionTopic(questiontopic);
+		this.setCorrectOption(correctoption);
 	}
 
-	/**
-	 * @return the options
-	 */
+	public String getQuestion() {
+		return Question;
+	}
+
+	public void setQuestion(String question) {
+		Question = question;
+	}
+
+	public String getQuestionTopic() {
+		return questionTopic;
+	}
+
+	public void setQuestionTopic(String questionTopic) {
+		this.questionTopic = questionTopic;
+	}
+
 	public HashMap<Integer, String> getOptions() {
 		return options;
 	}
 
-	/**
-	 * @param options the options to set
-	 */
 	public void setOptions(HashMap<Integer, String> options) {
 		this.options = options;
+	}
+
+	public Integer getCorrectOption() {
+		return correctOption;
+	}
+
+	public void setCorrectOption(Integer correctOption) {
+		this.correctOption = correctOption;
+	}
+
+	public boolean checkAnswer(int choice) {
+		if (choice == correctOption) {
+			return true;
+		}
+		else{
+			return false;
+		}	
 	}
 	
 
