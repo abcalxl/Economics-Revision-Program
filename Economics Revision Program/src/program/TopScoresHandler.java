@@ -9,7 +9,7 @@ public class TopScoresHandler {
 	public ArrayList<String> stringscores = new ArrayList<String>();
 	public int[] integerScores;
 	public TopScoresHandler () {
-		File testfile = new File("src/resources/scores.txt");
+		File testfile = new File("src/resources/Scores.txt");
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(testfile.getPath()));
 			String nextLine;

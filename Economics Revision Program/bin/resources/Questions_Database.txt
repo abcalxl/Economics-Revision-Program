@@ -1,0 +1,8 @@
+Which one of the following best describes the central economic problem?|a|b|c|d|0|topic
+Which one of the following best describes the central purpose of economic activity?|a|b|c|d|0|topic
+Match the following items or activities to the appropriate factor of production.|a|b|c|d|0|topic
+How many genders are there?|1|2|3|4|1|topic
+What is an opportunity cost?|a|b|c|d|0|topic
+Which of the following represent a human need?|a|b|c|d|0|topic
+What is 1+1?|a|b|c|d|0|topic
+Is Economics a science?|a|b|c|d|0|topic

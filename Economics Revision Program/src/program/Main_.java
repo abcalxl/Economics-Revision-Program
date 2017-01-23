@@ -70,6 +70,12 @@ public class Main_ extends JFrame {
 			showoption.setVisible(true);
 			setContentPane(showoption);
 		}
+		else if (pName.equals("runquiz")) {
+			RunQuiz runquiz = new RunQuiz(mainframe, topic, questionquantity);
+			runquiz.setBounds(0, 0, 1024, 768);
+			runquiz.setVisible(true);
+			setContentPane(runquiz);
+		}
 		else {
 			MainScreen mainscreen = new MainScreen(mainframe);
 			mainscreen.setBounds(0, 0, 1024, 768);
