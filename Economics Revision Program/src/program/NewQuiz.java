@@ -11,6 +11,8 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class NewQuiz extends JPanel {
 	private JTextField txtNumberOfQuestions;
@@ -22,7 +24,7 @@ public class NewQuiz extends JPanel {
 	public NewQuiz(Main_ mainframe) {
 		setLayout(null);
 		mainframe_ = mainframe;
-		String[] topicArray = {"Select the unit", "Unit 1", "Unit 2", "Unit 3"};
+		String[] topicArray = {"Select the unit", "Unit 1", "Unit 2", "Unit 3", "Unit 4"};
 		
 		JLabel lblNewQuiz = new JLabel("New Quiz");
 		lblNewQuiz.setBounds(449, 62, 181, 37);
@@ -52,6 +54,13 @@ public class NewQuiz extends JPanel {
 		
 		
 		txtNumberOfQuestions = new JTextField();
+		txtNumberOfQuestions.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				txtNumberOfQuestions.setText("");
+				repaint();
+			}
+		});
 		txtNumberOfQuestions.setText("Number of Questions");
 		txtNumberOfQuestions.setBounds(299, 248, 181, 27);
 		add(txtNumberOfQuestions);

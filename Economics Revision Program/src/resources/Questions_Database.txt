@@ -1,0 +1,8 @@
+Which one of the following best describes the central economic problem?|food|beef|pork|resources allocation|3|topic
+Which one of the following best describes the central purpose of economic activity?|anarchism|capitalism|communism|consumerism|1|topic
+What's te cash u receive when u w0rk.|Land|Labour|Capital|Wage|3|topic
+The proleteriat have nothing to lose but their __________. What goes in the gap?|money|chains|land|freedom|1|topic
+What is an opportunity cost?|OC|OD|OE|OF|0|topic
+Which of the following represent a human need?|Water|Cars|Shoes|Candy|0|topic
+What is 1+2?|1|2|3|4|2|topic
+Is Economics a science?|Yes|No|dont know|is it|0|topic

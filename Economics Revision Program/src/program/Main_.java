@@ -46,6 +46,12 @@ public class Main_ extends JFrame {
 			mainscreen.setVisible(true);
 			setContentPane(mainscreen);
 		}
+		else if (pName.equals("loginscreen")) {
+			LoginScreen loginscreen = new LoginScreen(mainframe);
+			loginscreen.setBounds(0, 0, 1024, 768);
+			loginscreen.setVisible(true);
+			setContentPane(loginscreen);
+		}
 		else if (pName.equals("help")) {
 			HelpScreen helpscreen = new HelpScreen(mainframe);
 			helpscreen.setBounds(0, 0, 1024, 768);
@@ -69,6 +75,18 @@ public class Main_ extends JFrame {
 			showoption.setBounds(0, 0, 1024, 768);
 			showoption.setVisible(true);
 			setContentPane(showoption);
+		}
+		else if (pName.equals("runquiz")) {
+			RunQuiz runquiz = new RunQuiz(mainframe, topic, questionquantity);
+			runquiz.setBounds(0, 0, 1024, 768);
+			runquiz.setVisible(true);
+			setContentPane(runquiz);
+		}
+		else if (pName.equals("endquiz")) {
+			EndQuiz endquiz = new EndQuiz(mainframe, topic); //its actually score but yeh
+			endquiz.setBounds(0, 0, 1024, 768);
+			endquiz.setVisible(true);
+			setContentPane(endquiz);
 		}
 		else {
 			MainScreen mainscreen = new MainScreen(mainframe);

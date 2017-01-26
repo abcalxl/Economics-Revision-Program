@@ -3,29 +3,68 @@ package questions;
 import java.util.HashMap;
 
 public class Question {
-	public String Question;
-	public String questionTopic;
+	private String Question;
+	private String questionTopic;
 	private HashMap<Integer, String> options = new HashMap<Integer, String>();
-	public Integer correctOption;
+	private int correctOption;
+	private int selectedOption;
 	
 	public Question(String question, String questiontopic, Integer correctoption) {
-		this.Question = question;
-		this.questionTopic = questiontopic;
-		this.correctOption = correctoption;
+		this.setQuestion(question);
+		this.setQuestionTopic(questiontopic);
+		this.setCorrectOption(correctoption);
+	}
+	
+	public Question() {
 	}
 
-	/**
-	 * @return the options
-	 */
-	public HashMap<Integer, String> getOptions() {
-		return options;
+	public String getQuestion() {
+		return Question;
 	}
 
-	/**
-	 * @param options the options to set
-	 */
+	public void setQuestion(String question) {
+		Question = question;
+	}
+	
+	public int getSelectedOption() {
+		return selectedOption;
+	}
+
+	public void setSelectedOption(int option) {
+		selectedOption = option;
+	}
+
+	public String getQuestionTopic() {
+		return questionTopic;
+	}
+
+	public void setQuestionTopic(String questionTopic) {
+		this.questionTopic = questionTopic;
+	}
+
+	public String getOptions(int x) {
+		return options.get(x);
+	}
+
 	public void setOptions(HashMap<Integer, String> options) {
 		this.options = options;
+	}
+
+	public Integer getCorrectOption() {
+		return correctOption;
+	}
+
+	public void setCorrectOption(Integer correctOption) {
+		this.correctOption = correctOption;
+	}
+
+	public boolean checkAnswer() {
+		if (selectedOption == correctOption) {
+			return true;
+		}
+		else {
+			return false;
+		}	
 	}
 	
 

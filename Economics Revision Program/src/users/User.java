@@ -5,7 +5,6 @@ public class User {
 	private String lastName;
 	private String UserName;
 	private String Password;
-	private Boolean isTeacher;
 	
 	public User(String firstname, String lastname, String username, String password) {
 		this.firstName = firstname;
@@ -40,14 +39,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.Password = password;
-	}
-
-	public Boolean getIsTeacher() {
-		return isTeacher;
-	}
-
-	public void setIsTeacher(Boolean isTeacher) {
-		this.isTeacher = isTeacher;
 	}
 
 }
